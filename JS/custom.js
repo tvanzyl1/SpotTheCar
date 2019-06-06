@@ -35,6 +35,7 @@ var db = new localdb('STC');
 			$('#newGamePage').collapse("hide");
 			$('#gamePage').collapse("hide");
 			$('#newPlayerPage').collapse("hide");
+			$('#navbarSupportedContent1').collapse("hide");
 			refreshGameList();
 		}
 
