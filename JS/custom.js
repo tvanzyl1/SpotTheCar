@@ -130,36 +130,26 @@ var db = new localdb('STC');
 			var thGameNum = document.createElement('th'); thGameNum.appendChild(document.createTextNode("ID"));
 			var thGameName = document.createElement('th'); thGameName.appendChild(document.createTextNode("Game Name"));
 			var thGameStatus = document.createElement('th'); thGameStatus.appendChild(document.createTextNode("Status"));
-			var thGameAction = document.createElement('th'); thGameAction.appendChild(document.createTextNode("Action"));
-			thead.appendChild(thGameNum);thead.appendChild(thGameName);thead.appendChild(thGameStatus);thead.appendChild(thGameAction);
+			thead.appendChild(thGameNum);thead.appendChild(thGameName);thead.appendChild(thGameStatus);
 			table.appendChild(thead);
-		//	alert("Game: "+gameCount + "and TotalRows :"+obj.totalrows);
 
 				for (var j = 1; j <= obj.totalrows; j++) {
 					var tdGameNum = document.createElement('td');
 					var tdGameName = document.createElement('td');
 					var tdGameStatus = document.createElement('td');
-					var tdGameAction = document.createElement('td');
 
 					var tr = document.createElement('tr');
+					tr.setAttribute("onclick","gotoGame("+obj.rows[j].ID+");");
 
 					table.appendChild(tr);
 					tdGameNum.appendChild(document.createTextNode(obj.rows[j].ID));
 					tdGameName.appendChild(document.createTextNode(obj.rows[j].gameType));
 					tdGameStatus.appendChild(document.createTextNode(obj.rows[j].gameStatus));
 
-					var ActionButton = document.createElement('button');
-					ActionButton.type = "button";
-					ActionButton.className = "btn btn-default";
-					ActionButton.setAttribute("onclick","gotoGame("+obj.rows[j].ID+");");
-					ActionButton.appendChild(document.createTextNode("Play"));
-					tdGameAction.appendChild(ActionButton);
-
 
 					tr.appendChild(tdGameNum);
 					tr.appendChild(tdGameName);
 					tr.appendChild(tdGameStatus);
-					tr.appendChild(tdGameAction);
 				};
 				gameCount = obj.totalrows;
 
