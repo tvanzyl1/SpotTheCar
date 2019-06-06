@@ -13,3 +13,6 @@ The game is simple and easy to get started. Create a new game and name it. For e
 So the first player to spot 100 yellow cars win!
 
 Next, add some players and start playing.
+
+Special mention to mike183 for the LocalDB script.
+https://github.com/mike183/localDB
