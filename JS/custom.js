@@ -182,7 +182,6 @@ var db = new localdb('STC');
 
 		function cancelAddPlayer()
 		{
-			alert("cancelAddPlayerBtn");
 			gotoGame(gameNum);
 		}
 
