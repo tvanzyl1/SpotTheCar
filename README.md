@@ -1,5 +1,5 @@
 
-* [Spot the Car - A Simple Game For Long Drives]
+<h2>Spot the Car - A Simple Game For Long Drives</h2>
 
 Spot the Car is a small and simple game to keep the passengers in a car busy on long drives.
 
